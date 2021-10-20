@@ -1,0 +1,2 @@
+# KalkulatorSpalania
+Kalkulator Spalania QT
