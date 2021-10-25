@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>640</width>
+    <height>529</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,20 +27,14 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
-       <widget class="QLineEdit" name="kmLineEdit"/>
-      </item>
-      <item row="1" column="0">
+      <item row="2" column="0">
        <widget class="QLabel" name="dystansLabel">
         <property name="text">
          <string>Dystans</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
-       <widget class="QLineEdit" name="dystansLineEdit"/>
-      </item>
-      <item row="3" column="0">
+      <item row="4" column="0">
        <widget class="QLabel" name="wynikSpalaniaNa100kmLabel">
         <property name="text">
          <string>Wynik spalania na 100km</string>
@@ -48,12 +42,34 @@
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QLineEdit" name="wynikSpalaniaNa100kmLineEdit"/>
-      </item>
-      <item row="2" column="1">
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="Oblicz">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(176, 176, 176);
+color:black;</string>
+        </property>
         <property name="text">
          <string>Oblicz</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QDoubleSpinBox" name="paliwoo">
+        <property name="maximum">
+         <double>99999.990000000005239</double>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QDoubleSpinBox" name="dystanss">
+        <property name="maximum">
+         <double>99999.990000000005239</double>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QDoubleSpinBox" name="wynikk">
+        <property name="maximum">
+         <double>9999.989999999999782</double>
         </property>
        </widget>
       </item>
@@ -66,7 +82,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>640</width>
      <height>25</height>
     </rect>
    </property>
@@ -75,8 +91,12 @@
      <string>MENU</string>
     </property>
     <addaction name="actionTEST"/>
+    <addaction name="separator"/>
     <addaction name="actionHistoria"/>
+    <addaction name="separator"/>
     <addaction name="actionCo_tam"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
    </widget>
    <addaction name="menuMENU"/>
   </widget>
