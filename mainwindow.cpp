@@ -37,9 +37,10 @@ void MainWindow::on_Oblicz_clicked()
 
     if (file.open(QIODevice::WriteOnly | QIODevice::Text)){
         QTextStream stream(&file);
+        stream << "----" << "\n" << "\n";
         stream << "km: " << ui->dystanss->value() << "\n";
         stream << "dystans: " << ui->paliwoo->value() << "\n";
-        stream << "spalanie l/100km: " << spalanie;
+        stream << "spalanie l/100km: " << spalanie << "\n";
     }
     file.close();
 }
