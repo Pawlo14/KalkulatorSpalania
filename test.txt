@@ -1,3 +1,3 @@
-km: 100
-dystans: 5
-spalanie l/100km: 5.000000
+dystans (km): 143
+spalone paliwo (l): 5
+spalanie (l/100km): 3.50

@@ -33,7 +33,7 @@
        <attribute name="title">
         <string>Kalkulator</string>
        </attribute>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -245,6 +245,25 @@ background-color: rgb(39, 39, 39);</string>
           <width>561</width>
           <height>301</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="wyswietl">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>400</y>
+          <width>80</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;</string>
+        </property>
+        <property name="text">
+         <string>Wyświetl</string>
         </property>
        </widget>
       </widget>

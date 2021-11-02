@@ -21,6 +21,8 @@ private slots:
 
     void on_Zapisz_clicked();
 
+    void on_wyswietl_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
