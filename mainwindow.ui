@@ -27,20 +27,6 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="dystansLabel">
-        <property name="text">
-         <string>Dystans</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="0">
-       <widget class="QLabel" name="wynikSpalaniaNa100kmLabel">
-        <property name="text">
-         <string>Wynik spalania na 100km</string>
-        </property>
-       </widget>
-      </item>
       <item row="3" column="1">
        <widget class="QPushButton" name="Oblicz">
         <property name="styleSheet">
@@ -52,10 +38,24 @@ color:black;</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
-       <widget class="QDoubleSpinBox" name="paliwoo">
+      <item row="4" column="0">
+       <widget class="QLabel" name="wynikSpalaniaNa100kmLabel">
+        <property name="text">
+         <string>Wynik spalania na 100km</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QDoubleSpinBox" name="wynikk">
         <property name="maximum">
-         <double>99999.990000000005239</double>
+         <double>9999.989999999999782</double>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="dystansLabel">
+        <property name="text">
+         <string>Dystans</string>
         </property>
        </widget>
       </item>
@@ -66,10 +66,10 @@ color:black;</string>
         </property>
        </widget>
       </item>
-      <item row="4" column="1">
-       <widget class="QDoubleSpinBox" name="wynikk">
+      <item row="0" column="1">
+       <widget class="QDoubleSpinBox" name="paliwoo">
         <property name="maximum">
-         <double>9999.989999999999782</double>
+         <double>99999.990000000005239</double>
         </property>
        </widget>
       </item>
@@ -86,36 +86,35 @@ color:black;</string>
      <height>25</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuMENU">
+   <widget class="QMenu" name="menuHistoria">
     <property name="title">
-     <string>MENU</string>
+     <string>HISTORIA</string>
     </property>
-    <addaction name="actionTEST"/>
-    <addaction name="separator"/>
-    <addaction name="actionHistoria"/>
-    <addaction name="separator"/>
-    <addaction name="actionCo_tam"/>
-    <addaction name="separator"/>
-    <addaction name="separator"/>
    </widget>
-   <addaction name="menuMENU"/>
+   <widget class="QMenu" name="menuWYNIKI">
+    <property name="title">
+     <string>WYNIKI</string>
+    </property>
+    <property name="separatorsCollapsible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuKALKULATOR">
+    <property name="title">
+     <string>KALKULATOR</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menutest">
+    <property name="title">
+     <string>test</string>
+    </property>
+   </widget>
+   <addaction name="menuKALKULATOR"/>
+   <addaction name="menuHistoria"/>
+   <addaction name="menuWYNIKI"/>
+   <addaction name="menutest"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionTEST">
-   <property name="text">
-    <string>Kalkulator spalania</string>
-   </property>
-  </action>
-  <action name="actionHistoria">
-   <property name="text">
-    <string>Historia</string>
-   </property>
-  </action>
-  <action name="actionCo_tam">
-   <property name="text">
-    <string>Coś tam</string>
-   </property>
-  </action>
  </widget>
  <resources/>
  <connections/>

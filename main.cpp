@@ -1,4 +1,6 @@
 #include "mainwindow.h"
+#include <QFile>
+#include <QDebug>
 
 #include <QApplication>
 
@@ -10,3 +12,4 @@ int main(int argc, char *argv[])
     return a.exec();
 
 }
+
