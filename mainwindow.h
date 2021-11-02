@@ -19,6 +19,7 @@ private slots:
 
     void on_Oblicz_clicked();
 
+    void on_Zapisz_clicked();
 
 private:
     Ui::MainWindow *ui;
