@@ -24,7 +24,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="Kalkulator">
        <property name="styleSheet">
@@ -79,6 +79,9 @@ background-color: rgb(39, 39, 39);</string>
           <widget class="QDoubleSpinBox" name="wynik">
            <property name="styleSheet">
             <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
            </property>
            <property name="buttonSymbols">
             <enum>QAbstractSpinBox::NoButtons</enum>
@@ -191,6 +194,9 @@ background-color: rgb(39, 39, 39);</string>
           <widget class="QDoubleSpinBox" name="wynik_2">
            <property name="styleSheet">
             <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
            </property>
            <property name="buttonSymbols">
             <enum>QAbstractSpinBox::NoButtons</enum>
