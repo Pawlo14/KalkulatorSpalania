@@ -24,7 +24,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="Kalkulator">
        <property name="styleSheet">
@@ -134,7 +134,7 @@ background-color: rgb(39, 39, 39);</string>
         </property>
         <property name="styleSheet">
          <string notr="true">color: rgb(255, 255, 255);
-text-size: 20px;</string>
+font-size: 20px;</string>
         </property>
         <property name="text">
          <string>KALKULATOR</string>
@@ -237,6 +237,23 @@ background-color: rgb(39, 39, 39);</string>
           </widget>
          </item>
         </layout>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>10</y>
+          <width>311</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>Zapis</string>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="Historia">

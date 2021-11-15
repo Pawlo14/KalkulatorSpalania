@@ -25,7 +25,7 @@ void MainWindow::on_Oblicz_clicked() //kalkulator tab1
 {
     long double b = ui->dystans->value();
     long double a = ui->paliwo->value();
-//auto spalanie = std::to_string((a/b)*100);
+    //auto spalanie = std::to_string((a/b)*100);
     if(b!=0){
     ui->wynik->setValue((a/b)*100);
 }
@@ -38,54 +38,39 @@ void MainWindow::on_Oblicz_clicked() //kalkulator tab1
 void MainWindow::on_Zapisz_clicked() //zapis tab2
 {
 
-    long double bb = ui->dystans_2->value();
-    long double aa = ui->paliwo_2->value();
-//auto spalanie = std::to_string((a/b)*100);
+    long double bb = ui->dystans_2->value(); //przejechany dystans
+    long double aa = ui->paliwo_2->value(); //spalone paliwo
+    //auto spalanie_2 = std::to_string((aa/bb)*100);
     QString spalanie_2 = QString::number((aa/bb)*100,'f',2);
-    if(bb!=0){
+    if(bb!=0){ //bb to jest dystans
     ui->wynik_2->setValue((aa/bb)*100);
 }
     else {
         ui->wynik_2->setValue(0);
+        spalanie_2="nie dozwolona operacja - dzielenie przez 0";
 }
-    /*
-    QString fname = "C:\\Users\\pawel\\Desktop\\Pliki\\Projekty\\Programowanie aplikacyjne\\KalkulatorSpalania\\test.txt";
-    QFile file(fname);
+    //poprawić lokaliziację pliku (nie na sztywno)
+    //QString fname = ":/save/save.txt";
+    QFile file(":/save/save.txt");
 
-    if (file.open(QIODevice::WriteOnly | QIODevice::Text)){
-        QTextStream stream(&file);
-        stream << "dystans: " << ui->dystans_2->value() << "\n";
-        stream << "spalone paliwo: " << ui->paliwo_2->value() << "\n";
-        stream << "spalanie l/100km: " << spalanie_2 << "\n";
-    }
-    file.close();
-    */ //stary sposób zapisu
-
-    QString fname = "C:\\Users\\pawel\\Desktop\\Pliki\\Projekty\\Programowanie aplikacyjne\\KalkulatorSpalania\\test.txt";
-    QFile file(fname);
-
-    //if(!file.open(QFile::WriteOnly | QFile::Text)) {
-    //}
-    if(!file.open(QFile::WriteOnly | QFile::Text)) {
+    if(!file.open(QIODevice::WriteOnly)) {
         QMessageBox::warning(this,"title","błąd otwarcia pliku");
     }
     QTextStream stream(&file);
-    //out << text;
     stream << "dystans (km): " << ui->dystans_2->value() << "\n";
     stream << "spalone paliwo (l): " << ui->paliwo_2->value() << "\n";
     stream << "spalanie (l/100km): " << spalanie_2 << "\n";
-    file.flush();
+    //file.flush(); //dopisywanie linii
     file.close();
-    //nowy sposób zapisu, taki sam jak odczytu
 
 }
 
 
-void MainWindow::on_wyswietl_clicked()
+void MainWindow::on_wyswietl_clicked()  //tab3 - wyswietlanie
 {
 
-    QString fname = "C:\\Users\\pawel\\Desktop\\Pliki\\Projekty\\Programowanie aplikacyjne\\KalkulatorSpalania\\test.txt";
-    QFile file(fname);
+    //QString fname = ":/save/save.txt";
+    QFile file(":/save/save.txt");
 
     if(!file.open(QFile::ReadOnly | QFile::Text)) {
         QMessageBox::warning(this,"title","błąd otwarcia pliku");
