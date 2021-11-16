@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>save/save.txt</file>
+        <file>save/zapis.txt</file>
     </qresource>
 </RCC>
