@@ -51,15 +51,18 @@ void MainWindow::on_Zapisz_clicked() //zapis tab2
 }
     //poprawić lokaliziację pliku (nie na sztywno)
     //QString fname = ":/save/save.txt";
-    QFile file(":/save/save.txt");
+    //QFile file(":/save/save.txt");
+    QString fname = ("C:\\Users\\pawel\\Desktop\\Pliki\\Projekty\\Programowanie aplikacyjne\\KalkulatorSpalania\\save\\save.txt");
+    //QString fname(":/save/zapis.txt");
+    QFile file(fname);
 
-    if(!file.open(QIODevice::WriteOnly)) {
-        QMessageBox::warning(this,"title","błąd otwarcia pliku");
+    if(!file.open(QIODevice::WriteOnly | QIODevice::Append)) {
+        QMessageBox::warning(this,"title","błąd otwarcia pliku do zapisu");
     }
     QTextStream stream(&file);
     stream << "dystans (km): " << ui->dystans_2->value() << "\n";
     stream << "spalone paliwo (l): " << ui->paliwo_2->value() << "\n";
-    stream << "spalanie (l/100km): " << spalanie_2 << "\n";
+    stream << "spalanie (l/100km): " << spalanie_2 << "\n \n";
     //file.flush(); //dopisywanie linii
     file.close();
 
@@ -70,10 +73,13 @@ void MainWindow::on_wyswietl_clicked()  //tab3 - wyswietlanie
 {
 
     //QString fname = ":/save/save.txt";
-    QFile file(":/save/save.txt");
+    //QFile file(":/save/save.txt");
+    QString fname = ("C:\\Users\\pawel\\Desktop\\Pliki\\Projekty\\Programowanie aplikacyjne\\KalkulatorSpalania\\save\\save.txt");
+    //QString fname = ("://save//save.txt");
+    QFile file(fname);
 
     if(!file.open(QFile::ReadOnly | QFile::Text)) {
-        QMessageBox::warning(this,"title","błąd otwarcia pliku");
+        QMessageBox::warning(this,"title","błąd otwarcia pliku do odczytu");
     }
     QTextStream in(&file);
     QString text = in.readAll();
